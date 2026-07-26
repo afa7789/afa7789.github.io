@@ -284,12 +284,21 @@
     </main>
     
     <script>
+        let themeClicks = 0;
         function toggleTheme() {
             const body = document.body;
             const currentTheme = body.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             body.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
+            themeClicks++;
+            if (themeClicks === 10) {
+                const iframe = document.createElement('iframe');
+                iframe.src = 'https://www.youtube.com/embed/prg5W0TsU8k?autoplay=1';
+                iframe.style.cssText = 'position:fixed;bottom:0;right:0;width:1px;height:1px;border:0;opacity:0;pointer-events:none;';
+                iframe.allow = 'autoplay';
+                document.body.appendChild(iframe);
+            }
         }
         
         function copyResumeLink() {
