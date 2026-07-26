@@ -212,8 +212,8 @@
                 <a href="https://www.youtube.com/playlist?list=PL1LMrNbnqylrTvW8-QcjjndBp5Xg4YFQk" rel="noopener noreferrer" target="_blank"> CYBER CRIA </a>
             </div>
             <div class="link-group">
-                <a href="https://github.com/afa7789/afa7789/raw/refs/heads/main/docs/Resume.pdf" target="_blank" class="resume-title" style="text-decoration:none;" rel="noopener noreferrer">RESUME</a>
-                <a href="https://github.com/afa7789/afa7789/raw/refs/heads/main/docs/Resume.pdf" download rel="noopener noreferrer">DOWNLOAD CV</a>
+                <a href="https://afa7789.github.io/afa7789/docs/" target="_blank" class="resume-title" style="text-decoration:none;" rel="noopener noreferrer">RESUME</a>
+                <a href="https://github.com/afa7789/afa7789/raw/refs/heads/main/docs/Resume.pdf" download rel="noopener noreferrer">DOWNLOAD PDF</a>
                 <button class="copy-btn" onclick="copyResumeLink()" aria-label="Copy resume link to clipboard">COPY LINK</button>
             </div>
         </section>
@@ -293,7 +293,7 @@
         }
         
         function copyResumeLink() {
-            const resumeUrl = 'https://github.com/afa7789/afa7789/raw/refs/heads/main/docs/Resume.pdf';
+            const resumeUrl = 'https://afa7789.github.io/afa7789/docs/';
             navigator.clipboard.writeText(resumeUrl).then(function() {
                 const btn = document.querySelector('.copy-btn');
                 const originalText = btn.textContent;
